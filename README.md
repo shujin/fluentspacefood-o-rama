@@ -8,6 +8,7 @@ Three coworkers at [Fluent Space](http://fluentspace.my) went to lunch, and as u
 - Python 2.7.2
 - Django 1.5.1
 - PostgreSQL
+- Foursquare Venue Explore API
 
 ### I wanna help!
 These are among some of the things that would be nice to have:
