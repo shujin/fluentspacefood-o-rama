@@ -48,7 +48,7 @@
       </p>
 
       <p>
-        <a href='{{  selected_place.canonicalUrl }}'>{{  selected_place.venue.canonicalUrl }}</a>
+        <a href="{{ selected_place.venue.canonicalUrl|safe }}">{{  selected_place.venue.canonicalUrl|safe }}</a>
       </p>
     </div>
 
