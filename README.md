@@ -8,15 +8,15 @@ Three coworkers at [Fluent Space](http://fluentspace.my) went to lunch, and as u
 - Python 2.7.2
 - Django 1.5.1
 - PostgreSQL
-- Foursquare Venue Explore API
+- [Foursquare Venue Explore API](https://developer.foursquare.com/docs/venues/explore)
 
 ### I wanna help!
 These are among some of the things that would be nice to have:
 
-- [ ] Venue tips!
-- [ ] List down specials (if any)
-- [ ] Venue photos
-- [ ] Really, anything that can make this better!
+- Venue tips!
+- List down specials (if any)
+- Venue photos
+- Really, anything that can make this better!
 
 ### I wanna help, but I'm not a python hacker :(
 There's always **HTML, CSS and JavaScript** portions that can be improved :)
@@ -25,4 +25,4 @@ Heck, python/django's not that hard to learn. Use this as a way to learn python/
 
 ***
 ### Contributors
-- @shujin
+- [@shujin](https://github.com/shujin)
