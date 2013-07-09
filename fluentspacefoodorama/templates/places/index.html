@@ -19,6 +19,7 @@
         }
         a {
           color: #089BFF;
+          text-decoration: none;
         }
         a:visited {
           color: #089BFF;
@@ -29,7 +30,7 @@
     <div id="container">
       <h3>Lunch today will be at</h3>
 
-      <h1>{{ selected_place.venue.name }}</h1>
+      <a href="{{ selected_place.venue.canonicalUrl|safe }}"><h1>{{ selected_place.venue.name }}</h1></a>
       <p>
         {{ selected_place.venue.location.address }}<br>
         {{ selected_place.venue.location.crossStreet }}
@@ -53,9 +54,6 @@
       </p>
       {% endif %}
 
-      <p>
-        <a href="{{ selected_place.venue.canonicalUrl|safe }}">{{  selected_place.venue.canonicalUrl|safe }}</a>
-      </p>
     </div>
 
     <div id="footer">
