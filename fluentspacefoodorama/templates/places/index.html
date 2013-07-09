@@ -40,12 +40,18 @@
       </p>
 
       <p>
-        Rating: {{ selected_place.venue.rating|default:"N/A" }} / 10
+        <b>Rating:</b> {{ selected_place.venue.rating|default:"N/A" }} / 10
       </p>
 
       <p>
-        Checkins: {{ selected_place.venue.stats.checkinsCount }}
+        <b>Checkins:</b> {{ selected_place.venue.stats.checkinsCount }}
       </p>
+
+      {% if tips %}
+      <p>
+        <b>Random Tip:</b> {{ tips.sample.text }}
+      </p>
+      {% endif %}
 
       <p>
         <a href="{{ selected_place.venue.canonicalUrl|safe }}">{{  selected_place.venue.canonicalUrl|safe }}</a>
