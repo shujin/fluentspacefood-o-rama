@@ -10,7 +10,7 @@
         body {
           color: #333;
           font-family: "Helvetica", Arial, sans-serif;
-          font-size: 1em;
+          font-size: 0.9em;
           line-height: 1.8em;
         }
         hr {
@@ -29,17 +29,32 @@
           max-width: 700px;
           height: 300px;
         }
+        b {
+          display: block;
+          text-transform: uppercase;
+          font-weight: bold;
+        }
+        h1 {
+          font-size: 2.2em;
+        }
       </style>
   </head>
   <body>
     <div id="container">
-      <h3>Lunch today will be at</h3>
+      <h3>Lunch today will be at...</h3>
 
       <a href="{{ selected_place.venue.canonicalUrl|safe }}"><h1>{{ selected_place.venue.name }}</h1></a>
+
       <p>
+        <b>Category</b> {{ category.name }}
+      </p>
+
+      {% if selected_place.venue.location.address %}
+      <p><b>Address</b>
         {{ selected_place.venue.location.address }}<br>
         {{ selected_place.venue.location.crossStreet }}
       </p>
+      {% endif %}
       
       {% load gmapify %}
 
@@ -52,11 +67,11 @@
       {% endblock js %}
 
       <p>
-        <b>Rating:</b> {{ selected_place.venue.rating|default:"N/A" }} / 10
+        <b>Rating</b> {{ selected_place.venue.rating|default:"N/A" }} / 10
       </p>
 
       <p>
-        <b>Checkins:</b> {{ selected_place.venue.stats.checkinsCount }}
+        <b>Checkins</b> {{ selected_place.venue.stats.checkinsCount }}
       </p>
 
       {% if tips %}

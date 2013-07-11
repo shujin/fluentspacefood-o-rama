@@ -12,7 +12,7 @@ def index(request):
   req = requests.get(uri)
   all_places = req.json()["response"]["groups"][0]["items"]
   selected_place = random.choice(all_places)
-  print selected_place
+  category = selected_place["venue"]["categories"][0]
   if 'phrases' in selected_place:
     tips = random.choice(selected_place["phrases"])
   else:
@@ -21,5 +21,6 @@ def index(request):
   c = Context({
     'selected_place': selected_place,
     'tips': tips,
+    'category': category
   })
   return HttpResponse(t.render(c))
